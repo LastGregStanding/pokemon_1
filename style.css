@@ -18,17 +18,17 @@ body {
 }
 
 .battle_container {
-  /* background-color: yellow; */
+  background-color: lightblue;
   width: 1000px;
   height: 810px;
   margin: 0 auto;
-  border: black solid 5px;
+  border: red solid 5px;
   border-radius: 10px;
 }
 
 .section {
-  background-color: white;
-  border: transparent solid 1px;
+  background-color: lightblue;
+  border: transparent solid 3px;
   height: 200px;
 }
 
@@ -141,11 +141,13 @@ body {
 .enemy_character {
   text-align: end;
   margin-right: 10%;
+  background-color: lightblue;
 }
 
 img {
   width: 200px;
   height: 200px;
+  background-color: lightblue;
 }
 
 .three {
