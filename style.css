@@ -169,3 +169,17 @@ img {
 .healthy {
   background-color: green;
 }
+
+.lightning1 {
+  width: 100px;
+  height: 100px;
+  margin-left: 500px;
+}
+.lightning2 {
+  width: 100px;
+  height: 100px;
+  margin-left: 320px;
+}
+.hidden {
+  display: none;
+}

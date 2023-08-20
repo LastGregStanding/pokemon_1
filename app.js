@@ -26,6 +26,10 @@ for (let i = 0; i < 100; i++) {
   playerHealthBars.push(cell);
 }
 
+function effective() {
+  narration.textContent = "it was effective!";
+}
+
 // Player actions
 move.forEach((move) => {
   //#region Hover over move
@@ -46,13 +50,18 @@ move.forEach((move) => {
         for (let i = enemyHealth; i > enemyHealth - 20; i--) {
           enemyHealthBars[i].classList.remove("healthy");
           enemyHealthBars.pop(i);
+          //   setTimeout(effective, 1000);
         }
         break;
       case "Thunder":
-        narration.textContent = "pikachu used thunder!";
+        // narration.textContent = "pikachu used thunder!";
         for (let i = enemyHealth; i > enemyHealth - 40; i--) {
           enemyHealthBars[i].classList.remove("healthy");
           enemyHealthBars.pop(i);
+          setTimeout(makeLightning2, 500);
+          setTimeout(eraseLightning2, 700);
+          setTimeout(makeLightning1, 900);
+          setTimeout(eraseLightning1, 1200);
         }
         break;
       case "Spark":
@@ -62,8 +71,24 @@ move.forEach((move) => {
         narration.textContent = "pikachu used reflex!";
         break;
     }
+    turn = turn === 0 ? 1 : 0;
+    setTimeout(enemyTurn, 1000);
   });
 });
+
+// Enemy Turn
+function enemyTurn() {
+  const enemyMoves = ["bite", "poison", "coil", "gunk shot"];
+  let enemyDice = Math.floor(Math.random() * 4);
+  let enemyChoice = enemyMoves[enemyDice];
+  narration.textContent = `ekans used ${enemyChoice}`;
+  setTimeout(effective, 1000);
+  for (let i = playerHealth; i > playerHealth - 20; i--) {
+    playerHealthBars[i].classList.remove("healthy");
+    playerHealthBars.pop(i);
+    setTimeout(effective, 1000);
+  }
+}
 
 class Pokemon {
   constructor(name, health, accuracy, lvl, img) {
@@ -92,4 +117,23 @@ let charmander = new Pokemon(
   7,
   "pokemon/charmander_player.png"
 );
+//#endregion
+
+//#region lightning functions
+function makeLightning1() {
+  const lightning1 = document.querySelector(".lightning1");
+  lightning1.classList.remove("hidden");
+}
+function eraseLightning1() {
+  const lightning1 = document.querySelector(".lightning1");
+  lightning1.classList.add("hidden");
+}
+function makeLightning2() {
+  const lightning2 = document.querySelector(".lightning2");
+  lightning2.classList.remove("hidden");
+}
+function eraseLightning2() {
+  const lightning2 = document.querySelector(".lightning2");
+  lightning2.classList.add("hidden");
+}
 //#endregion
