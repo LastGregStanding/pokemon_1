@@ -73,11 +73,12 @@ body {
 
 .health_bar {
   height: 20px;
-  width: 180px;
-  border-radius: 30px;
-  background-color: green;
+  width: 170px;
+  /* background-color: green; */
   margin-top: 10px;
   border: black solid 3px;
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 .health_number {
@@ -158,4 +159,13 @@ img {
 .hover {
   text-decoration: underline;
   cursor: pointer;
+}
+
+.cell {
+  width: 10px;
+  height: 14px;
+  background-color: white;
+}
+.healthy {
+  background-color: green;
 }
