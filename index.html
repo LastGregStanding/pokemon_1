@@ -7,6 +7,69 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <header class="title">Pokemon!</header>
+
+    <div class="battle_container">
+      <!-- Section 1 -->
+      <div class="section">
+        <div class="character_stat_box" id="enemy_box">
+          <div class="character_info">
+            <p class="character_name">Ekans</p>
+            <p class="character_level">Lv5</p>
+          </div>
+          <div class="character_health_bar_div">
+            <div class="hp">HP</div>
+            <div class="health_bar" id="enemy_health"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 2 -->
+
+      <div class="section">
+        <div class="enemy_character">
+          <img src="pokemon/ekans.png" alt="ekans" />
+        </div>
+      </div>
+
+      <!-- Section 3 -->
+
+      <div class="section three">
+        <img
+          src="pokemon/pikachu_player.png"
+          alt="pikachu"
+          class="player_character"
+        />
+        <div class="character_stat_box" id="player_box">
+          <div class="character_info">
+            <p class="character_name">Pickachu</p>
+            <p class="character_level">Lv7</p>
+          </div>
+          <div class="character_health_bar_div">
+            <div class="hp">HP</div>
+            <div class="health_bar" id="player_health"></div>
+          </div>
+          <div class="health_number">20/20</div>
+        </div>
+      </div>
+
+      <!-- Section 4 -->
+
+      <div class="section">
+        <div class="game_interaction_box">
+          <div class="game_narration">
+            <p>What will pikachu do?</p>
+          </div>
+          <div class="player_moves">
+            <p>Scratch</p>
+            <p>Spark</p>
+            <p>Thunder</p>
+            <p>Reflex</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="app.js"></script>
   </body>
 </html>

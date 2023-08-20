@@ -2,5 +2,153 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  background-color: white;
+  font-family: monospace;
+}
+
+body {
   background-color: black;
+}
+
+.title {
+  text-align: center;
+  font-size: 40px;
+  color: white;
+  background-color: black;
+}
+
+.battle_container {
+  /* background-color: yellow; */
+  width: 1000px;
+  height: 810px;
+  margin: 0 auto;
+  border: black solid 5px;
+  border-radius: 10px;
+}
+
+.section {
+  background-color: white;
+  border: transparent solid 1px;
+  height: 200px;
+}
+
+.character_stat_box {
+  width: 350px;
+  height: 120px;
+  background-color: orange;
+  border-radius: 20px;
+  border: black 5px solid;
+  margin-left: 200px;
+}
+
+.character_stat_box {
+  background-color: orange;
+  font-size: 30px;
+}
+
+.character_info {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 20px;
+  background-color: orange;
+}
+
+.character_name {
+  background-color: orange;
+}
+.character_level {
+  background-color: orange;
+}
+.hp {
+  background-color: orange;
+}
+
+.character_health_bar_div {
+  display: flex;
+  gap: 20px;
+  justify-content: end;
+  margin-right: 3%;
+  background-color: orange;
+}
+
+.health_bar {
+  height: 20px;
+  width: 180px;
+  border-radius: 30px;
+  background-color: green;
+  margin-top: 10px;
+  border: black solid 3px;
+}
+
+.health_number {
+  margin-left: 200px;
+  background-color: orange;
+}
+
+#player_box {
+  margin-top: 2%;
+}
+
+#enemy_box {
+  margin-top: 8%;
+  margin-left: 6%;
+}
+
+.game_interaction_box {
+  height: 200px;
+  display: flex;
+  border: solid black 8px;
+  border-radius: 20px;
+  background-color: black;
+}
+.game_narration {
+  background-color: rgb(59, 102, 115);
+  width: 50%;
+  border: yellow 10px solid;
+  border-radius: 10px;
+}
+
+.game_narration p {
+  color: black;
+  background-color: transparent;
+  font-size: 60px;
+  color: rgb(232, 225, 225);
+  text-align: center;
+}
+
+.player_moves {
+  background-color: rgb(213, 216, 231);
+  border: purple solid 10px;
+  width: 50%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.player_moves p {
+  color: black;
+  background-color: transparent;
+  font-size: 50px;
+  margin-top: 5px;
+}
+
+.player_character {
+  margin-left: 7%;
+}
+
+.enemy_character {
+  text-align: end;
+  margin-right: 10%;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+}
+
+.three {
+  display: flex;
+  justify-content: space-around;
 }
